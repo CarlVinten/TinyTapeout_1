@@ -40,4 +40,5 @@ The GitHub action will automatically fetch the digital netlist from Wokwi and bu
 
 ## My docs
 
-In this project I will try to make an ALU
+In this project I will try to make an ALU.
+
