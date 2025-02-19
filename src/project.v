@@ -40,6 +40,6 @@ module tt_um_4_bit_ALU (
   
 
   // List all unused inputs to prevent warnings
-  wire _unused = &{ena, clk, rst_n, uio_oe, uio_out, 1'b0};
+  wire _unused = &{ena, clk, rst_n, uio_oe, uio_out, uio_in[7:2], 1'b0};
 
 endmodule
