@@ -25,7 +25,7 @@ module tt_um_4_bit_ALU (
       2'b01: uo_out = ui_in[0:3] * ui_in[4:7];
       2'b10: uo_out = ui_in[0:3] - ui_in[4:7];
       2'b11: uo_out = ui_in[0:3] / ui_in[4:7];
-      default: ou_out = 0;
+      default: uo_out = 0;
     endcase
   end
   
