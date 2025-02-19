@@ -21,7 +21,8 @@ module tt_um_4_bit_ALU (
   reg [3:0]in_b;
   reg [7:0]out;
   reg [1:0]sel;
-
+  assign uio_out = 1;
+  assign uio_oe = 1;
   assign in_a = ui_in[3:0];
   assign in_b = ui_in[7:4];
   assign uo_out = out;
