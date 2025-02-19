@@ -25,15 +25,9 @@ module tt_um_4_bit_ALU (
       2'b01: uo_out = ui_in[0:3] * ui_in[4:7];
       2'b10: uo_out = ui_in[0:3] - ui_in[4:7];
       2'b11: uo_out = ui_in[0:3] / ui_in[4:7];
-      default: out_out = 8'b00000000;
+      default: out_out = 0;
     endcase
   end
-    
-
-
-  assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
-  assign uio_out = 0;
-  assign uio_oe  = 0;
   
 
   // List all unused inputs to prevent warnings
