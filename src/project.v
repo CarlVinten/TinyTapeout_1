@@ -30,10 +30,10 @@ module tt_um_4_bit_ALU (
    
   always @(posedge clk) begin
     case(sel)
-      2'b00: out = in_a  in_b;
-      2'b01: out = in_a  in_b;
-      2'b10: out = in_a  in_b;
-      2'b11: out = in_a  in_b;
+      2'b00: out <= in_a  in_b;
+      2'b01: out <= in_a  in_b;
+      2'b10: out <= in_a  in_b;
+      2'b11: out <= in_a  in_b;
       default: out = 0;
     endcase
   end
