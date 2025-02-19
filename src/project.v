@@ -17,11 +17,25 @@ module tt_um_4_bit_ALU (
 );
 
   // All output pins must be assigned. If not used, assign to 0.
+  
+
+  always @(posedge clk) begin
+    case(uio_in)
+      2'b00: uo_out = ui_in[0:3] + ui_in[4:7];
+      2'b01: uo_out = ui_in[0:3] * ui_in[4:7];
+      2'b10: uo_out = ui_in[0:3] - ui_in[4:7];
+      2'b11: uo_out = ui_in[0:3] / ui_in[4:7];
+      default: out_out = 8'b00000000;
+    endcase
+  end
+    
+
+
   assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
   assign uio_out = 0;
   assign uio_oe  = 0;
   
-  
+
   // List all unused inputs to prevent warnings
   wire _unused = &{ena, clk, rst_n, 1'b0};
 
