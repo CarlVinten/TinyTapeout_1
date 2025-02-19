@@ -33,13 +33,13 @@ module tt_um_4_bit_ALU (
       2'b00: out[4:0] <= in_a + in_b;
       2'b01: out[4:0] <= in_a - in_b;
       2'b10: out[4:0] <= in_a * in_b;
-      2'b11: out[4:0] <= in_a / in_b;
+      2'b11: out[3:0] <= in_a / in_b;
       default: out = 0;
     endcase
   end
   
 
   // List all unused inputs to prevent warnings
-  wire _unused = &{ena, clk, rst_n, 1'b0};
+  wire _unused = &{ena, clk, rst_n, uio_oe, uio_out, 1'b0};
 
 endmodule
