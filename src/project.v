@@ -18,7 +18,7 @@ module tt_um_4_bit_ALU (
 
   // All output pins must be assigned. If not used, assign to 0.
   
-
+   assign uo_out = 0;
   always @(posedge clk) begin
     case(uio_in)
       2'b00: uo_out = ui_in[0:3] + ui_in[4:7];
