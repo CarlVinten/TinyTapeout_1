@@ -17,4 +17,4 @@ I don't know.
 
 ## External hardware
 
-nothing.
+switches for input, LEDS for output
